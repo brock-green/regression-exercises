@@ -22,9 +22,7 @@ def wrangle_zillow():
                 taxamount,
                 fips
             FROM properties_2017
-            JOIN propertylandusetype
-                ON propertylandusetype.propertylandusetypeid = properties_2017.propertylandusetypeid
-            WHERE propertylandusetype.propertylandusetypeid = '261';'''
+            WHERE propertylandusetypeid = '261';'''
             , url)
 
 
