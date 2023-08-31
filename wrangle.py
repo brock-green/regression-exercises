@@ -35,5 +35,6 @@ def wrangle_zillow():
             return df
     df = get_zillow_data()
     df.replace(0, np.nan, inplace=True)
-    df = df.dropna() 
+    df = df.dropna()
+    df.rename(columns={'bathroomcnt' : 'bath', 'bedroomcnt' : 'bed', 'calculatedfinishedsquarefeet' : 'sqft', 'taxvaluedollarcnt' : 'tax_val', 'yearbuilt' : 'year', 'taxamount' : 'tax'}, inplace=True) 
     return df   
